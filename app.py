@@ -1,9 +1,8 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 
 # --- STYLING KHUSUS UNTUK DASHBOARD ---
-# Menggunakan HTML dan CSS untuk menata tampilan.
-# st.markdown dengan unsafe_allow_html=True memungkinkan kita menyisipkan kode HTML/CSS.
 st.markdown("""
 <style>
 /* Mengatur font untuk seluruh aplikasi */
@@ -45,6 +44,85 @@ html, body, [class*="css"] {
     color: #1e40af; /* Warna biru */
     margin-top: 5px;
 }
+
+/* Styling untuk container "Progress Project" */
+.progress-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Menengahkan kartu */
+    gap: 20px; /* Jarak antar kartu */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Styling untuk setiap kartu progress */
+.progress-card {
+    background-color: #f7f9fc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    width: 200px; /* Lebar tetap untuk setiap kartu */
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Styling untuk lingkaran persentase */
+.progress-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+    border: 5px solid;
+}
+
+/* Styling untuk teks di dalam lingkaran */
+.progress-text {
+    position: absolute;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* Warna lingkaran berdasarkan persentase */
+.circle-green { border-color: #28a745; background-color: #e2f0e6; color: #28a745; }
+.circle-red { border-color: #dc3545; background-color: #f8e1e4; color: #dc3545; }
+.circle-yellow { border-color: #ffc107; background-color: #fff6e4; color: #ffc107; }
+
+.project-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    word-wrap: break-word; /* Memastikan teks tidak melebihi lebar kartu */
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Batasi hingga 2 baris */
+    -webkit-box-orient: vertical;
+}
+
+/* Gaya untuk indikator perubahan persentase */
+.change-indicator {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.up { color: #28a745; }
+.down { color: #dc3545; }
+.same { color: #6c757d; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -70,24 +148,26 @@ df_detail = load_data('dataset.csv')
 df_summary = load_data('dataset2.csv')
 
 # 3. JUDUL UTAMA DASHBOARD
-# Menggunakan CSS class 'title-centered' untuk menengahkan judul
 st.markdown('<div class="title-centered">📊 Dashboard Monitoring Proyek</div>', unsafe_allow_html=True)
-st.markdown("---") # Garis pemisah
+st.markdown("---")
 
 # 4. PERHITUNGAN METRIK UNTUK KARTU
 if df_summary is not None:
+    # Mengisi nilai NaN pada kolom persentase_this_week dan persentase_last_week dengan 0
+    df_summary['persentase_this_week'] = df_summary['persentase_this_week'].fillna(0)
+    df_summary['persentase_last_week'] = df_summary['persentase_last_week'].fillna(0)
+    
+    # Menghapus baris yang tidak memiliki nama proyek
     df_summary.dropna(subset=['name_project'], inplace=True)
     df_summary['pic'] = df_summary['pic'].astype(str)
 
     total_projects = df_summary['name_project'].nunique()
-
     syarief_count = df_summary['pic'].str.contains('Syarief', case=False, na=False).sum()
     nita_count = df_summary['pic'].str.contains('Nita', case=False, na=False).sum()
     nanin_count = df_summary['pic'].str.contains('Nanin', case=False, na=False).sum()
     sahrul_count = df_summary['pic'].str.contains('Sahrul', case=False, na=False).sum()
     akmal_count = df_summary['pic'].str.contains('Akmal', case=False, na=False).sum()
 
-    # Fungsi untuk membuat dan menampilkan kartu metrik dengan styling
     def create_metric_card(label, value):
         st.markdown(f"""
         <div class="metric-card">
@@ -96,8 +176,6 @@ if df_summary is not None:
         </div>
         """, unsafe_allow_html=True)
 
-    # 5. TAMPILKAN KARTU METRIK DI TENGAH
-    # Menggunakan 6 kolom untuk menampung kartu secara rata
     col1, col2, col3, col4, col5, col6 = st.columns(6)
 
     with col1:
@@ -118,7 +196,59 @@ if df_summary is not None:
     with col6:
         create_metric_card("👨‍💻 Akmal", akmal_count)
     
-    st.markdown("---") # Garis pemisah
+    st.markdown("---")
+
+    # 5. ROW 2: PROGRESS PROJECT
+    st.subheader("Progress Project")
+
+    # Membuat container untuk kartu-kartu progres
+    st.markdown('<div class="progress-container">', unsafe_allow_html=True)
+
+    for index, row in df_summary.iterrows():
+        # Menghitung selisih persentase
+        delta = row['persentase_this_week'] - row['persentase_last_week']
+        delta_str = ""
+        delta_class = "same"
+        icon = ""
+
+        if delta > 0:
+            delta_str = f"({delta:.0f}%)"
+            delta_class = "up"
+            icon = "🔺"
+        elif delta < 0:
+            delta_str = f"({abs(delta):.0f}%)"
+            delta_class = "down"
+            icon = "🔻"
+        else:
+            delta_str = ""
+            delta_class = "same"
+            icon = "🟰"
+
+        # Menentukan warna lingkaran berdasarkan persentase
+        circle_class = ""
+        if row['persentase_this_week'] >= 80:
+            circle_class = "circle-green"
+        elif row['persentase_this_week'] >= 50:
+            circle_class = "circle-yellow"
+        else:
+            circle_class = "circle-red"
+
+        # Menampilkan setiap kartu sebagai sebuah kolom
+        st.markdown(f"""
+        <div class="progress-card">
+            <div class="progress-circle {circle_class}">
+                {int(row['persentase_this_week'])}%
+            </div>
+            <div class="project-title">{row['name_project']}</div>
+            <div class="change-indicator {delta_class}">
+                {icon} {delta_str}
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    st.markdown('</div>', unsafe_allow_html=True) # Tutup container
+    
+    st.markdown("---")
 
 # 6. TAMPILKAN TABEL DATA
 st.header("Tabel Data Proyek")
