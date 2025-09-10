@@ -191,75 +191,55 @@ if df_summary is not None:
     st.markdown("---")
 
     # 5. ROW 2: PROGRESS PROJECT
-st.subheader("Progress Project")
+    st.subheader("Progress Project")
 
-# Membuat layout grid dengan 6 kolom untuk setiap baris
-cols = st.columns(6)
+    # Membuat layout grid dengan 6 kolom untuk setiap baris
+    cols = st.columns(6)
 
-if "selected_project" not in st.session_state:
-    st.session_state.selected_project = None
+    for index, row in df_summary.iterrows():
+        # Menghitung selisih persentase
+        delta = row['persentase_this_week'] - row['persentase_last_week']
+        delta_str = ""
+        delta_class = "same"
+        icon = ""
 
-for index, row in df_summary.iterrows():
-    delta = row['persentase_this_week'] - row['persentase_last_week']
-    delta_str, delta_class, icon = "", "same", "🟰"
-    if delta > 0:
-        delta_str, delta_class, icon = f"({delta:.0f}%)", "up", "🔺"
-    elif delta < 0:
-        delta_str, delta_class, icon = f"({abs(delta):.0f}%)", "down", "🔻"
+        if delta > 0:
+            delta_str = f"({delta:.0f}%)"
+            delta_class = "up"
+            icon = "🔺"
+        elif delta < 0:
+            delta_str = f"({abs(delta):.0f}%)"
+            delta_class = "down"
+            icon = "🔻"
+        else:
+            delta_str = ""
+            delta_class = "same"
+            icon = "🟰"
 
-    if row['persentase_this_week'] >= 80:
-        circle_class = "circle-green"
-    elif row['persentase_this_week'] >= 50:
-        circle_class = "circle-yellow"
-    else:
-        circle_class = "circle-red"
+        # Menentukan warna lingkaran berdasarkan persentase
+        circle_class = ""
+        if row['persentase_this_week'] >= 80:
+            circle_class = "circle-green"
+        elif row['persentase_this_week'] >= 50:
+            circle_class = "circle-yellow"
+        else:
+            circle_class = "circle-red"
 
-    # Tombol klik project
-    with cols[index % 6]:
-        if st.button(
-            f"{row['name_project']}",
-            key=f"btn_{index}",
-            help="Klik untuk lihat detail proyek"
-        ):
-            st.session_state.selected_project = row['name_project']
-
-        st.markdown(f"""
-        <div class="progress-card">
-            <div class="progress-circle {circle_class}">
-                {int(row['persentase_this_week'])}%
+        # Menampilkan kartu di kolom yang sesuai
+        with cols[index % 6]:
+            st.markdown(f"""
+            <div class="progress-card">
+                <div class="progress-circle {circle_class}">
+                    {int(row['persentase_this_week'])}%
+                </div>
+                <div class="project-title">{row['name_project']}</div>
+                <div class="change-indicator {delta_class}">
+                    {icon} {delta_str}
+                </div>
             </div>
-            <div class="project-title">{row['name_project']}</div>
-            <div class="change-indicator {delta_class}">
-                {icon} {delta_str}
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-
-st.markdown("---")
-
-# 6. ROW 3: PROJECT DETAIL
-if st.session_state.selected_project and df_detail is not None:
-    selected_project = st.session_state.selected_project
-    st.subheader(f"Project Detail: {selected_project}")
-
-    df_project = df_detail[df_detail['name_project'] == selected_project]
-
-    for _, detail in df_project.iterrows():
-        with st.expander(f"📌 {detail['activity']}"):
-            st.write(f"**Start Date:** {detail['start_date']}")
-            st.write(f"**Due Date:** {detail['due_date']}")
-            st.write(f"**Hari:** {detail['total_hari']}")
-            st.write(f"**Progress Minggu Ini:** {detail['progress_this_week']}%")
-            st.write(f"**Status:** {detail['status']}")
-
-            # Jika ada detail activity
-            if pd.notna(detail.get("detail_activity1")) and detail["detail_activity1"] != "":
-                st.markdown(f"- {detail['detail_activity1']}")
-            if pd.notna(detail.get("detail_activity2")) and detail["detail_activity2"] != "":
-                st.markdown(f"- {detail['detail_activity2']}")
-            if pd.notna(detail.get("detail_activity3")) and detail["detail_activity3"] != "":
-                st.markdown(f"- {detail['detail_activity3']}")
-
+            """, unsafe_allow_html=True)
+    
+    st.markdown("---")
 
 # 6. TAMPILKAN TABEL DATA
 st.header("Tabel Data Proyek")
