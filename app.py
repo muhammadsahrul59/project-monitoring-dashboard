@@ -51,29 +51,32 @@ html, body, [class*="css"] {
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    width: 100%; /* Lebar tetap untuk setiap kartu */
-    height: 150px;
+    width: 100%;
+    min-height: 200px;   /* ✅ lebih tinggi supaya muat */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* ✅ biar isi dari atas ke bawah */
     text-align: center;
     margin: 5px;
+    gap: 8px;  /* ✅ jarak antar elemen */
 }
+
 
 /* Styling untuk lingkaran persentase */
 .progress-circle {
     width: 80px;
     aspect-ratio: 1 / 1;  
     border-radius: 50%;
-    display: inline-flex;  
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border: 5px solid;
 }
+
 
 /* Styling untuk teks di dalam lingkaran */
 .progress-text {
@@ -242,4 +245,5 @@ if df_summary is not None:
 # 6. TAMPILKAN TABEL DATA
 st.header("Tabel Data Proyek")
 st.dataframe(df_summary)
+
 
