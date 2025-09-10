@@ -16,7 +16,7 @@ html, body, [class*="css"] {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
-    color: #0d47a1; /* Warna biru gelap */
+    color: #00a39d; /* Warna biru gelap */
     margin-bottom: 2rem;
 }
 
@@ -41,7 +41,7 @@ html, body, [class*="css"] {
 .metric-value {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1e40af; /* Warna biru */
+    color: #00a39d; /* Warna biru */
     margin-top: 5px;
 }
 
@@ -244,3 +244,4 @@ if df_summary is not None:
 # 6. TAMPILKAN TABEL DATA
 st.header("Tabel Data Proyek")
 st.dataframe(df_summary)
+
