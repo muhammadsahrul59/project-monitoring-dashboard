@@ -410,7 +410,8 @@ if df_summary is not None:
     chart_col1, chart_col2 = st.columns(2)
     
     with chart_col1:
-        # Progress distribution pie chart
+        st.subheader("📈 Progress Distribution")
+        # Progress distribution using Streamlit built-in charts
         progress_bins = ['0-25%', '26-50%', '51-75%', '76-99%', '100%']
         progress_counts = [
             len(df_summary[(df_summary['persentase_this_week'] >= 0) & (df_summary['persentase_this_week'] <= 25)]),
@@ -420,41 +421,39 @@ if df_summary is not None:
             len(df_summary[df_summary['persentase_this_week'] >= 100])
         ]
         
-        fig_pie = px.pie(
-            values=progress_counts, 
-            names=progress_bins,
-            title="Progress Distribution",
-            color_discrete_sequence=px.colors.qualitative.Set3
-        )
-        fig_pie.update_layout(
-            title_font_size=18,
-            title_x=0.5,
-            height=400
-        )
-        st.plotly_chart(fig_pie, use_container_width=True)
+        progress_df = pd.DataFrame({
+            'Progress Range': progress_bins,
+            'Count': progress_counts
+        })
+        
+        st.bar_chart(progress_df.set_index('Progress Range'))
+        
+        # Show progress summary in cards
+        col_a, col_b, col_c = st.columns(3)
+        with col_a:
+            st.metric("🔴 Critical (0-25%)", progress_counts[0])
+        with col_b:
+            st.metric("🟡 At Risk (26-50%)", progress_counts[1])
+        with col_c:
+            st.metric("🟢 Good (51%+)", sum(progress_counts[2:]))
     
     with chart_col2:
-        # PIC workload bar chart
+        st.subheader("👥 Projects per PIC")
+        # PIC workload bar chart using Streamlit
         pic_data = pd.DataFrame({
             'PIC': ['Syarief', 'Nita', 'Nanin', 'Sahrul', 'Akmal'],
             'Projects': [syarief_count, nita_count, nanin_count, sahrul_count, akmal_count]
         })
         
-        fig_bar = px.bar(
-            pic_data, 
-            x='PIC', 
-            y='Projects',
-            title="Projects per PIC",
-            color='Projects',
-            color_continuous_scale='viridis'
-        )
-        fig_bar.update_layout(
-            title_font_size=18,
-            title_x=0.5,
-            height=400,
-            showlegend=False
-        )
-        st.plotly_chart(fig_bar, use_container_width=True)
+        st.bar_chart(pic_data.set_index('PIC'))
+        
+        # Show top performers
+        pic_data_sorted = pic_data.sort_values('Projects', ascending=False)
+        st.info(f"🏆 Most Active: {pic_data_sorted.iloc[0]['PIC']} ({pic_data_sorted.iloc[0]['Projects']} projects)")
+        
+        # Average workload
+        avg_workload = pic_data['Projects'].mean()
+        st.info(f"📊 Average Workload: {avg_workload:.1f} projects per PIC")
 
     st.markdown("---")
 
