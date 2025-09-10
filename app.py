@@ -64,14 +64,13 @@ html, body, [class*="css"] {
 /* Styling untuk lingkaran persentase */
 .progress-circle {
     width: 80px;
-    height: 80px;
+    aspect-ratio: 1 / 1;  
     border-radius: 50%;
-    display: flex;
+    display: inline-flex;  
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     font-weight: bold;
-    color: white;
     margin-bottom: 10px;
     border: 5px solid;
 }
@@ -92,12 +91,11 @@ html, body, [class*="css"] {
     font-size: 0.9rem;
     font-weight: 600;
     color: #333;
-    word-wrap: break-word; /* Memastikan teks tidak melebihi lebar kartu */
-    white-space: normal;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; /* Batasi hingga 2 baris */
-    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    white-space: normal; 
+    overflow: visible;     
+    display: block;       
+    margin-top: 5px;
 }
 
 /* Gaya untuk indikator perubahan persentase */
@@ -206,11 +204,11 @@ if df_summary is not None:
         if delta > 0:
             delta_str = f"({delta:.0f}%)"
             delta_class = "up"
-            icon = "🔺"
+            icon = "⬆️"
         elif delta < 0:
             delta_str = f"({abs(delta):.0f}%)"
             delta_class = "down"
-            icon = "🔻"
+            icon = "⬇️"
         else:
             delta_str = ""
             delta_class = "same"
