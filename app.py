@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly.graph_objects as go
 
 # --- STYLING KHUSUS UNTUK DASHBOARD ---
 st.markdown("""
@@ -11,6 +10,7 @@ st.markdown("""
 html, body, [class*="css"] {
     font-family: 'Inter', sans-serif;
 }
+
 /* Mengatur judul utama di tengah halaman */
 .title-centered {
     text-align: center;
@@ -19,6 +19,99 @@ html, body, [class*="css"] {
     color: #00a39d; /* Warna biru gelap */
     margin-bottom: 2rem;
 }
+
+/* Mengatur kotak (card) untuk metrik */
+.metric-card {
+    background-color: #f0f2f6;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Menengahkan teks di dalam kotak */
+}
+
+/* Gaya untuk label metrik */
+.metric-label {
+    font-size: 1rem;
+    color: #4b5563; /* Warna abu-abu */
+    font-weight: 600;
+}
+
+/* Gaya untuk nilai metrik */
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00a39d; /* Warna biru */
+    margin-top: 5px;
+}
+
+/* Styling untuk setiap kartu progress */
+.progress-card {
+    background-color: #f7f9fc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    width: 100%; /* Lebar tetap untuk setiap kartu */
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+}
+
+/* Styling untuk lingkaran persentase */
+.progress-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+    border: 5px solid;
+}
+
+/* Styling untuk teks di dalam lingkaran */
+.progress-text {
+    position: absolute;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* Warna lingkaran berdasarkan persentase */
+.circle-green { border-color: #28a745; background-color: #e2f0e6; color: #28a745; }
+.circle-red { border-color: #dc3545; background-color: #f8e1e4; color: #dc3545; }
+.circle-yellow { border-color: #ffc107; background-color: #fff6e4; color: #ffc107; }
+
+.project-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    word-wrap: break-word; /* Memastikan teks tidak melebihi lebar kartu */
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Batasi hingga 2 baris */
+    -webkit-box-orient: vertical;
+}
+
+/* Gaya untuk indikator perubahan persentase */
+.change-indicator {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.up { color: #28a745; }
+.down { color: #dc3545; }
+.same { color: #6c757d; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -32,9 +125,6 @@ st.set_page_config(
 # 2. FUNGSI UNTUK MEMUAT DATA
 @st.cache_data
 def load_data(filepath):
-    """
-    Loads data from a CSV file.
-    """
     try:
         df = pd.read_csv(filepath, sep=';')
         return df
@@ -50,9 +140,9 @@ df_summary = load_data('dataset2.csv')
 st.markdown('<div class="title-centered">📊 Dashboard Monitoring Proyek</div>', unsafe_allow_html=True)
 st.markdown("---")
 
-# 4. PERHITUNGAN METRIK UNTUK KARTU (Menggunakan st.metric yang lebih bersih)
+# 4. PERHITUNGAN METRIK UNTUK KARTU
 if df_summary is not None:
-    # --- PERBAIKAN: membersihkan dan mengonversi kolom persentase ke float ---
+    # --- PERBAIKAN: MEMBERSihkan dan mengonversi kolom persentase ke float ---
     df_summary['persentase_this_week'] = df_summary['persentase_this_week'].astype(str).str.replace('%', '').str.strip().replace('', '0').astype(float)
     df_summary['persentase_last_week'] = df_summary['persentase_last_week'].astype(str).str.replace('%', '').str.strip().replace('', '0').astype(float)
     
@@ -64,86 +154,114 @@ if df_summary is not None:
     df_summary['pic'] = df_summary['pic'].astype(str)
 
     total_projects = df_summary['name_project'].nunique()
-    pic_counts = df_summary['pic'].str.lower().value_counts()
-    
+    syarief_count = df_summary['pic'].str.contains('Syarief', case=False, na=False).sum()
+    nita_count = df_summary['pic'].str.contains('Nita', case=False, na=False).sum()
+    nanin_count = df_summary['pic'].str.contains('Nanin', case=False, na=False).sum()
+    sahrul_count = df_summary['pic'].str.contains('Sahrul', case=False, na=False).sum()
+    akmal_count = df_summary['pic'].str.contains('Akmal', case=False, na=False).sum()
+
+    def create_metric_card(label, value):
+        st.markdown(f"""
+        <div class="metric-card">
+            <div class="metric-label">{label}</div>
+            <div class="metric-value">{value}</div>
+        </div>
+        """, unsafe_allow_html=True)
+
     col1, col2, col3, col4, col5, col6 = st.columns(6)
 
     with col1:
-        st.metric("🚀 Total Projects", total_projects)
+        create_metric_card("🚀 Total Projects", total_projects)
 
     with col2:
-        st.metric("👨‍💻 Syarief", pic_counts.get('syarief', 0))
+        create_metric_card("👨‍💻 Syarief", syarief_count)
 
     with col3:
-        st.metric("👩‍💻 Nita", pic_counts.get('nita', 0))
+        create_metric_card("👩‍💻 Nita", nita_count)
 
     with col4:
-        st.metric("👩‍💻 Nanin", pic_counts.get('nanin', 0))
+        create_metric_card("👩‍💻 Nanin", nanin_count)
     
     with col5:
-        st.metric("👨‍💻 Sahrul", pic_counts.get('sahrul', 0))
+        create_metric_card("👨‍💻 Sahrul", sahrul_count)
 
     with col6:
-        st.metric("👨‍💻 Akmal", pic_counts.get('akmal', 0))
+        create_metric_card("👨‍💻 Akmal", akmal_count)
     
     st.markdown("---")
 
-    # 5. ROW 2: PROGRESS PROJECT (Menggunakan Plotly Gauge Charts)
-    st.subheader("Progress Project")
+    # 5. ROW 2: PROGRESS PROJECT
+st.subheader("Progress Project")
 
-    # Membuat layout grid dengan 6 kolom
-    cols = st.columns(6)
-    
-    # Menampilkan gauge chart untuk setiap proyek
-    for index, row in df_summary.iterrows():
-        # Menghitung selisih persentase
-        delta = row['persentase_this_week'] - row['persentase_last_week']
-        delta_str = f" from {row['persentase_last_week']:.0f}%"
+# Membuat layout grid dengan 6 kolom untuk setiap baris
+cols = st.columns(6)
 
-        # Menentukan warna berdasarkan persentase
-        if row['persentase_this_week'] >= 80:
-            range_color = 'green'
-        elif row['persentase_this_week'] >= 50:
-            range_color = 'gold'
-        else:
-            range_color = 'red'
+if "selected_project" not in st.session_state:
+    st.session_state.selected_project = None
 
-        # Membuat objek Plotly Gauge Chart
-        fig = go.Figure(go.Indicator(
-            mode="gauge+number+delta",
-            value=row['persentase_this_week'],
-            domain={'x': [0, 1], 'y': [0, 1]},
-            title={'text': f"**{row['name_project']}**", 'font': {'size': 16}},
-            delta={'reference': row['persentase_last_week'], 'position': "bottom", 'font': {'size': 14}},
-            gauge={
-                'axis': {'range': [None, 100], 'tickwidth': 1, 'tickcolor': "darkblue"},
-                'bar': {'color': "#00a39d"},
-                'bgcolor': "white",
-                'borderwidth': 2,
-                'bordercolor': "gray",
-                'steps': [
-                    {'range': [0, 49], 'color': 'lightcoral'},
-                    {'range': [50, 79], 'color': 'khaki'},
-                    {'range': [80, 100], 'color': 'lightgreen'}],
-                'threshold': {
-                    'line': {'color': "red", 'width': 4},
-                    'thickness': 0.75,
-                    'value': 90}}))
+for index, row in df_summary.iterrows():
+    delta = row['persentase_this_week'] - row['persentase_last_week']
+    delta_str, delta_class, icon = "", "same", "🟰"
+    if delta > 0:
+        delta_str, delta_class, icon = f"({delta:.0f}%)", "up", "🔺"
+    elif delta < 0:
+        delta_str, delta_class, icon = f"({abs(delta):.0f}%)", "down", "🔻"
 
-        fig.update_layout(
-            height=250,
-            margin=dict(l=10, r=10, t=50, b=10),
-            paper_bgcolor="lavender",
-            font={'color': "darkblue", 'family': "Arial"}
-        )
+    if row['persentase_this_week'] >= 80:
+        circle_class = "circle-green"
+    elif row['persentase_this_week'] >= 50:
+        circle_class = "circle-yellow"
+    else:
+        circle_class = "circle-red"
 
-        # Menampilkan chart di kolom yang sesuai
-        with cols[index % 6]:
-            st.plotly_chart(fig, use_container_width=True)
-    
-    st.markdown("---")
+    # Tombol klik project
+    with cols[index % 6]:
+        if st.button(
+            f"{row['name_project']}",
+            key=f"btn_{index}",
+            help="Klik untuk lihat detail proyek"
+        ):
+            st.session_state.selected_project = row['name_project']
+
+        st.markdown(f"""
+        <div class="progress-card">
+            <div class="progress-circle {circle_class}">
+                {int(row['persentase_this_week'])}%
+            </div>
+            <div class="project-title">{row['name_project']}</div>
+            <div class="change-indicator {delta_class}">
+                {icon} {delta_str}
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+st.markdown("---")
+
+# 6. ROW 3: PROJECT DETAIL
+if st.session_state.selected_project and df_detail is not None:
+    selected_project = st.session_state.selected_project
+    st.subheader(f"Project Detail: {selected_project}")
+
+    df_project = df_detail[df_detail['name_project'] == selected_project]
+
+    for _, detail in df_project.iterrows():
+        with st.expander(f"📌 {detail['activity']}"):
+            st.write(f"**Start Date:** {detail['start_date']}")
+            st.write(f"**Due Date:** {detail['due_date']}")
+            st.write(f"**Hari:** {detail['total_hari']}")
+            st.write(f"**Progress Minggu Ini:** {detail['progress_this_week']}%")
+            st.write(f"**Status:** {detail['status']}")
+
+            # Jika ada detail activity
+            if pd.notna(detail.get("detail_activity1")) and detail["detail_activity1"] != "":
+                st.markdown(f"- {detail['detail_activity1']}")
+            if pd.notna(detail.get("detail_activity2")) and detail["detail_activity2"] != "":
+                st.markdown(f"- {detail['detail_activity2']}")
+            if pd.notna(detail.get("detail_activity3")) and detail["detail_activity3"] != "":
+                st.markdown(f"- {detail['detail_activity3']}")
+
 
 # 6. TAMPILKAN TABEL DATA
 st.header("Tabel Data Proyek")
-if df_summary is not None:
-    st.dataframe(df_summary)
+st.dataframe(df_summary)
+
