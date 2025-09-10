@@ -41,7 +41,7 @@ html, body, [class*="css"] {
 .metric-value {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #00a39d; /* Warna biru */
+    color: #1e40af; /* Warna biru */
     margin-top: 5px;
 }
 
@@ -74,8 +74,6 @@ html, body, [class*="css"] {
     color: white;
     margin-bottom: 10px;
     border: 5px solid;
-    /* Perbaikan agar bulatan tidak menjadi oval */
-    flex-shrink: 0;
 }
 
 /* Styling untuk teks di dalam lingkaran */
@@ -152,6 +150,7 @@ if df_summary is not None:
     df_summary.fillna({'persentase_this_week': 0, 'persentase_last_week': 0}, inplace=True)
 
     # Menghapus baris yang tidak memiliki nama proyek
+    df_summary.dropna(subset=['name_project'], inplace=True)
     df_summary['pic'] = df_summary['pic'].astype(str)
 
     total_projects = df_summary['name_project'].nunique()
@@ -207,11 +206,11 @@ if df_summary is not None:
         if delta > 0:
             delta_str = f"({delta:.0f}%)"
             delta_class = "up"
-            icon = "⬆️"
+            icon = "🔺"
         elif delta < 0:
             delta_str = f"({abs(delta):.0f}%)"
             delta_class = "down"
-            icon = "⬇️"
+            icon = "🔻"
         else:
             delta_str = ""
             delta_class = "same"
