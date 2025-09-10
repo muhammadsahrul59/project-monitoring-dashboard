@@ -2,7 +2,13 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-# --- STYLING KHUSUS UNTUK DASHBOARD ---
+# --- 1. KONFIGURASI HALAMAN & STYLING KHUSUS ---
+st.set_page_config(
+    page_title="Project Monitoring Dashboard",
+    page_icon="📊",
+    layout="wide"
+)
+
 st.markdown("""
 <style>
 /* Mengatur font untuk seluruh aplikasi */
@@ -74,6 +80,8 @@ html, body, [class*="css"] {
     color: white;
     margin-bottom: 10px;
     border: 5px solid;
+    /* Perbaikan agar bulatan tidak menjadi oval */
+    flex-shrink: 0;
 }
 
 /* Styling untuk teks di dalam lingkaran */
@@ -112,17 +120,20 @@ html, body, [class*="css"] {
 .up { color: #28a745; }
 .down { color: #dc3545; }
 .same { color: #6c757d; }
+
+/* Menghilangkan gaya default tombol Streamlit */
+div[data-testid="stVerticalBlock"] > div > div > button {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center;
+    width: 100% !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
-# 1. KONFIGURASI HALAMAN
-st.set_page_config(
-    page_title="Project Monitoring Dashboard",
-    page_icon="📊",
-    layout="wide"
-)
-
-# 2. FUNGSI UNTUK MEMUAT DATA
+# --- 2. FUNGSI UNTUK MEMUAT DATA ---
 @st.cache_data
 def load_data(filepath):
     try:
@@ -136,7 +147,11 @@ def load_data(filepath):
 df_detail = load_data('dataset.csv')
 df_summary = load_data('dataset2.csv')
 
-# 3. JUDUL UTAMA DASHBOARD
+# Inisialisasi session state untuk menyimpan proyek yang dipilih
+if 'selected_project' not in st.session_state:
+    st.session_state.selected_project = None
+
+# --- 3. JUDUL UTAMA DASHBOARD ---
 st.markdown('<div class="title-centered">📊 Dashboard Monitoring Proyek</div>', unsafe_allow_html=True)
 st.markdown("---")
 
@@ -190,7 +205,7 @@ if df_summary is not None:
     
     st.markdown("---")
 
-    # 5. ROW 2: PROGRESS PROJECT
+    # --- 5. ROW 2: PROGRESS PROJECT (SEKARANG BISA DIKLIK) ---
     st.subheader("Progress Project")
 
     # Membuat layout grid dengan 6 kolom untuk setiap baris
@@ -225,23 +240,44 @@ if df_summary is not None:
         else:
             circle_class = "circle-red"
 
-        # Menampilkan kartu di kolom yang sesuai
+        # Menampilkan kartu di kolom yang sesuai, sekarang menjadi tombol
         with cols[index % 6]:
-            st.markdown(f"""
-            <div class="progress-card">
-                <div class="progress-circle {circle_class}">
-                    {int(row['persentase_this_week'])}%
+            if st.button(f"""
+                <div class="progress-card">
+                    <div class="progress-circle {circle_class}">
+                        {int(row['persentase_this_week'])}%
+                    </div>
+                    <div class="project-title">{row['name_project']}</div>
+                    <div class="change-indicator {delta_class}">
+                        {icon} {delta_str}
+                    </div>
                 </div>
-                <div class="project-title">{row['name_project']}</div>
-                <div class="change-indicator {delta_class}">
-                    {icon} {delta_str}
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
+                """, key=f"btn_{row['name_project']}", unsafe_allow_html=True):
+                st.session_state.selected_project = row['name_project']
     
     st.markdown("---")
 
-# 6. TAMPILKAN TABEL DATA
-st.header("Tabel Data Proyek")
-st.dataframe(df_summary)
+    # --- 6. ROW 3: MENAMPILKAN DETAIL DATA PROYEK (HANYA JIKA ADA YANG DIKLIK) ---
+    if st.session_state.selected_project and df_detail is not None:
+        st.header(f"Detail Proyek: {st.session_state.selected_project}")
+        
+        # Filter data dari dataset.csv berdasarkan proyek yang dipilih
+        filtered_df = df_detail[df_detail['name_project'] == st.session_state.selected_project]
+        
+        if not filtered_df.empty:
+            # Mengonversi kolom tanggal ke format yang lebih rapi
+            filtered_df['start_date'] = pd.to_datetime(filtered_df['start_date'], dayfirst=True, errors='coerce').dt.strftime('%d %b %Y')
+            filtered_df['due_date'] = pd.to_datetime(filtered_df['due_date'], dayfirst=True, errors='coerce').dt.strftime('%d %b %Y')
+            
+            # Memilih kolom yang ingin ditampilkan dan menamainya ulang
+            display_df = filtered_df[['activity', 'detail_activity1', 'start_date', 'due_date', 'total_hari', 'progress_this_week', 'status']]
+            display_df.columns = ['Aktivitas', 'Detail Aktivitas', 'Tanggal Mulai', 'Tanggal Selesai', 'Total Hari', 'Progres (%)', 'Status']
+            
+            st.dataframe(display_df, use_container_width=True)
+        else:
+            st.warning("Tidak ada data detail untuk proyek ini.")
 
+# --- 7. TAMPILKAN TABEL DATA SUMMARY SECARA UMUM DI BAWAH ---
+st.header("Tabel Data Proyek (Ringkasan)")
+if df_summary is not None:
+    st.dataframe(df_summary, use_container_width=True)
