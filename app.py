@@ -45,31 +45,20 @@ html, body, [class*="css"] {
     margin-top: 5px;
 }
 
-/* Styling untuk container "Progress Project" */
-.progress-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Menengahkan kartu */
-    gap: 20px; /* Jarak antar kartu */
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
 /* Styling untuk setiap kartu progress */
 .progress-card {
     background-color: #f7f9fc;
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    width: 200px; /* Lebar tetap untuk setiap kartu */
+    width: 100%; /* Lebar tetap untuk setiap kartu */
     height: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin: 5px;
 }
 
 /* Styling untuk lingkaran persentase */
@@ -204,7 +193,8 @@ if df_summary is not None:
     # 5. ROW 2: PROGRESS PROJECT
     st.subheader("Progress Project")
 
-    st.markdown('<div class="progress-container">', unsafe_allow_html=True)
+    # Membuat layout grid dengan 6 kolom untuk setiap baris
+    cols = st.columns(6)
 
     for index, row in df_summary.iterrows():
         # Menghitung selisih persentase
@@ -235,20 +225,19 @@ if df_summary is not None:
         else:
             circle_class = "circle-red"
 
-        # Menampilkan setiap kartu sebagai sebuah kolom
-        st.markdown(f"""
-        <div class="progress-card">
-            <div class="progress-circle {circle_class}">
-                {int(row['persentase_this_week'])}%
+        # Menampilkan kartu di kolom yang sesuai
+        with cols[index % 6]:
+            st.markdown(f"""
+            <div class="progress-card">
+                <div class="progress-circle {circle_class}">
+                    {int(row['persentase_this_week'])}%
+                </div>
+                <div class="project-title">{row['name_project']}</div>
+                <div class="change-indicator {delta_class}">
+                    {icon} {delta_str}
+                </div>
             </div>
-            <div class="project-title">{row['name_project']}</div>
-            <div class="change-indicator {delta_class}">
-                {icon} {delta_str}
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-    
-    st.markdown('</div>', unsafe_allow_html=True)
+            """, unsafe_allow_html=True)
     
     st.markdown("---")
 
