@@ -69,22 +69,24 @@ html, body, [class*="css"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #4b5563;
-    position: relative;
-    border: 5px solid #e0e0e0;
+    color: white;
+    margin-bottom: 10px;
+    border: 5px solid;
 }
 
-/* Efek progress bar pada lingkaran */
-.progress-bar {
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
+/* Styling untuk teks di dalam lingkaran */
+.progress-text {
     position: absolute;
-    top: 0;
-    left: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
 }
+
+/* Warna lingkaran berdasarkan persentase */
+.circle-green { border-color: #28a745; background-color: #e2f0e6; color: #28a745; }
+.circle-red { border-color: #dc3545; background-color: #f8e1e4; color: #dc3545; }
+.circle-yellow { border-color: #ffc107; background-color: #fff6e4; color: #ffc107; }
 
 .project-title {
     font-size: 0.9rem;
@@ -215,22 +217,20 @@ if df_summary is not None:
             icon = "🟰"
 
         # Menentukan warna lingkaran berdasarkan persentase
-        fill_color = "#28a745" # Hijau
-        if row['persentase_this_week'] < 50:
-            fill_color = "#dc3545" # Merah
-        elif row['persentase_this_week'] < 80:
-            fill_color = "#ffc107" # Kuning
-
-        # Menghitung derajat untuk gradient (persentase * 3.6)
-        degree = row['persentase_this_week'] * 3.6
+        circle_class = ""
+        if row['persentase_this_week'] >= 80:
+            circle_class = "circle-green"
+        elif row['persentase_this_week'] >= 50:
+            circle_class = "circle-yellow"
+        else:
+            circle_class = "circle-red"
 
         # Menampilkan kartu di kolom yang sesuai
         with cols[index % 6]:
             st.markdown(f"""
             <div class="progress-card">
-                <div class="progress-circle">
-                    <div class="progress-text">{int(row['persentase_this_week'])}%</div>
-                    <div class="progress-bar" style="background: conic-gradient({fill_color} {degree}deg, transparent {degree}deg);"></div>
+                <div class="progress-circle {circle_class}">
+                    {int(row['persentase_this_week'])}%
                 </div>
                 <div class="project-title">{row['name_project']}</div>
                 <div class="change-indicator {delta_class}">
