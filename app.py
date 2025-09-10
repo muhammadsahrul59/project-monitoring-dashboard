@@ -242,8 +242,64 @@ if df_summary is not None:
     
     st.markdown("---")
 
+# ==============================
+# 7. ROW 3: PROJECT DETAIL TABLE
+# ==============================
+st.markdown("## 📋 Project Details")
+
+if df_detail is not None:
+    # Dropdown pilih project
+    project_names = df_detail['name_project'].dropna().unique()
+    selected_project = st.selectbox("Pilih Project:", project_names)
+
+    if selected_project:
+        # Filter data sesuai project
+        project_data = df_detail[df_detail['name_project'] == selected_project]
+
+        # Buat list aktivitas
+        def get_activity(row):
+            details = [row['detail_activity1'], row['detail_activity2'], row['detail_activity3']]
+            details = [d for d in details if pd.notna(d) and str(d).strip() != ""]
+            if len(details) > 0:
+                return details  # ada detail -> dropdown
+            else:
+                return [row['activity']]  # hanya activity utama
+
+        # Buat tabel
+        table_data = []
+        for _, row in project_data.iterrows():
+            activities = get_activity(row)
+            selected_activity = st.selectbox(
+                f"Pilih Activity untuk {row['activity']}", 
+                activities,
+                key=f"activity_{row['activity']}"
+            )
+
+            status_color = {
+                "Done": "🟢 Done",
+                "Started": "🔵 Started",
+                "Not Started": "⚪ Not Started",
+                "Late": "🔴 Late"
+            }
+
+            table_data.append({
+                "PIC": row['pic'],
+                "Activity": selected_activity,
+                "Start Date": row['start_date'],
+                "Due Date": row['due_date'],
+                "Total Hari": row['total_hari'],
+                "Progress": f"{row['progress_this_week']}%",
+                "Status": status_color.get(row['status'], row['status'])
+            })
+
+        df_display = pd.DataFrame(table_data)
+
+        st.markdown(f"### Project Details: {selected_project}")
+        st.dataframe(df_display, use_container_width=True)
+
 # 6. TAMPILKAN TABEL DATA
 st.header("Tabel Data Proyek")
 st.dataframe(df_summary)
+
 
 
