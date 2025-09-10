@@ -153,10 +153,13 @@ st.markdown("---")
 
 # 4. PERHITUNGAN METRIK UNTUK KARTU
 if df_summary is not None:
-    # Mengisi nilai NaN pada kolom persentase_this_week dan persentase_last_week dengan 0
-    df_summary['persentase_this_week'] = df_summary['persentase_this_week'].fillna(0)
-    df_summary['persentase_last_week'] = df_summary['persentase_last_week'].fillna(0)
+    # --- PERBAIKAN: MEMBERSihkan dan mengonversi kolom persentase ke float ---
+    df_summary['persentase_this_week'] = df_summary['persentase_this_week'].astype(str).str.replace('%', '').str.strip().replace('', '0').astype(float)
+    df_summary['persentase_last_week'] = df_summary['persentase_last_week'].astype(str).str.replace('%', '').str.strip().replace('', '0').astype(float)
     
+    # Mengisi nilai NaN pada kolom persentase yang sudah bersih dengan 0
+    df_summary.fillna({'persentase_this_week': 0, 'persentase_last_week': 0}, inplace=True)
+
     # Menghapus baris yang tidak memiliki nama proyek
     df_summary.dropna(subset=['name_project'], inplace=True)
     df_summary['pic'] = df_summary['pic'].astype(str)
@@ -201,7 +204,6 @@ if df_summary is not None:
     # 5. ROW 2: PROGRESS PROJECT
     st.subheader("Progress Project")
 
-    # Membuat container untuk kartu-kartu progres
     st.markdown('<div class="progress-container">', unsafe_allow_html=True)
 
     for index, row in df_summary.iterrows():
@@ -222,7 +224,7 @@ if df_summary is not None:
         else:
             delta_str = ""
             delta_class = "same"
-            icon = "🟰"
+            icon = "➡️"
 
         # Menentukan warna lingkaran berdasarkan persentase
         circle_class = ""
@@ -246,7 +248,7 @@ if df_summary is not None:
         </div>
         """, unsafe_allow_html=True)
     
-    st.markdown('</div>', unsafe_allow_html=True) # Tutup container
+    st.markdown('</div>', unsafe_allow_html=True)
     
     st.markdown("---")
 
