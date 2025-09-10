@@ -152,7 +152,6 @@ if df_summary is not None:
     df_summary.fillna({'persentase_this_week': 0, 'persentase_last_week': 0}, inplace=True)
 
     # Menghapus baris yang tidak memiliki nama proyek
-    df_summary.dropna(subset=['name_project'], inplace=True)
     df_summary['pic'] = df_summary['pic'].astype(str)
 
     total_projects = df_summary['name_project'].nunique()
@@ -246,3 +245,4 @@ if df_summary is not None:
 # 6. TAMPILKAN TABEL DATA
 st.header("Tabel Data Proyek")
 st.dataframe(df_summary)
+
