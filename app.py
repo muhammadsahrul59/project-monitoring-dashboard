@@ -74,6 +74,8 @@ html, body, [class*="css"] {
     color: white;
     margin-bottom: 10px;
     border: 5px solid;
+    /* Perbaikan agar bulatan tidak menjadi oval */
+    flex-shrink: 0;
 }
 
 /* Styling untuk teks di dalam lingkaran */
@@ -206,11 +208,11 @@ if df_summary is not None:
         if delta > 0:
             delta_str = f"({delta:.0f}%)"
             delta_class = "up"
-            icon = "🔺"
+            icon = "⬆️"
         elif delta < 0:
             delta_str = f"({abs(delta):.0f}%)"
             delta_class = "down"
-            icon = "🔻"
+            icon = "⬇️"
         else:
             delta_str = ""
             delta_class = "same"
@@ -244,4 +246,3 @@ if df_summary is not None:
 # 6. TAMPILKAN TABEL DATA
 st.header("Tabel Data Proyek")
 st.dataframe(df_summary)
-
