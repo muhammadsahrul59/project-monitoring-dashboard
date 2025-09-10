@@ -1,0 +1,376 @@
+﻿name_project;activity;detail_activity1;detail_activity2;detail_activity3;start_date;due_date;total_hari;plan;progress_last_week;progress_this_week;status;pic
+OMNI Channel System;Business Process and Deflection Workflow Definition;Nota Usulan Pengadaan;;;01/02/2024;03/05/2024;54;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Process and Deflection Workflow Definition;RFI (Req for Information);;;01/04/2024;29/05/2024;32;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Process and Deflection Workflow Definition;RFP (Req for Proposal);;;06/05/2024;19/06/2024;27;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Proses Pengadaan;Kebutuhan Pengadaan (SOW, CR);;;06/05/2024;19/06/2024;3;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Proses Pengadaan;Aanwidjizing & RFP Respon;;;24/06/2024;12/07/2024;10;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Proses Pengadaan;Set Up environtment POC;;;15/07/2024;18/11/2024;5;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Proses Pengadaan;Pelaksanaan POC;;;18/11/2024;29/11/2024;45;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Proses Pengadaan;Penilaian Teknis;;;01/12/2024;27/12/2024;58;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Proses Pengadaan;Penyusunan BOQ ;;;27/12/2024;10/01/2025;58;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Proses Pengadaan;Penyusunan SOW Final;;;27/12/2024;10/01/2025;58;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Proses Pengadaan;Klarifikasi 1 On 1 vendor Omnichannel;;;13/01/2025;20/01/2025;58;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Proses Pengadaan;Memo Penilaian Teknis;;;10/01/2025;31/01/2025;9;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Proses E- Auction;Submit memo BOQ, SOW, Penilaian Teknis;;;24/01/2025;31/01/2025;3;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Proses E- Auction;Proses HPS;;;03/02/2025;14/02/2025;10;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Proses E- Auction;Pelaksanaan E-Auction;;;17/02/2025;21/02/2025;5;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Proses E- Auction;Klarifikasi & Negosiasi;;;17/02/2025;30/04/2025;45;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Proses E- Auction;SPK dan/ PKS;a. Pesetujuan Nota Usulan;;01/05/2025;31/07/2025;58;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Proses E- Auction;SPK dan/ PKS;b. SPK;;01/05/2025;31/07/2025;58;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Proses E- Auction;SPK dan/ PKS;c. PKS;;01/05/2025;31/07/2025;58;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Proses E- Auction;Kick Off ;a. Materi Kick Off;;20/07/2025;31/07/2025;9;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Proses E- Auction;Kick Off ;b. Pelaksanaan Kick Off;;20/07/2025;31/07/2025;9;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Gather Requirement;a. BR Day 1 : Modul User Manajemen;;18/06/2025;18/06/2025;1;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Gather Requirement;b. BR Day  2 : Modul Email & Sosmed;;19/06/2025;19/06/2025;1;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Gather Requirement;c. BR Day  3 : Modul Case Manajement;;20/06/2025;20/06/2025;1;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Gather Requirement;d. BR Day  4 : Integration WA, Livechat, FBM;;24/06/2025;24/06/2025;1;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Gather Requirement;e. BR Day  5 : WFM;;25/06/2025;25/06/2025;1;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Gather Requirement;f. BR Day  6 : Modul Escalation Manajemen;;26/06/2025;26/06/2025;1;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Gather Requirement;g. BR Day   7 : Knowledge Manajemen;;17/07/2025;17/07/2025;1;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Gather Requirement;h. BR Day   8 : Telesales (OASE), Datamart, Dataku;;18/07/2025;18/07/2025;1;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Gather Requirement;i. BR Day   9 : Channel Call & Modul QA dan Penjadwalan QA;;21/07/2025;21/07/2025;1;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Gather Requirement;j. BR Day   10: Report & Dashboard;;24/07/2025;06/08/2025;10;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);User Story (IBM);a. BR Day 1 : Modul User Manajemen;;04/09/2025;12/09/2025;6;100%;0%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);User Story (IBM);b. BR Day  2 : Modul Email & Sosmed;;04/09/2025;12/09/2025;6;100%;0%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);User Story (IBM);c. BR Day  3 : Modul Case Manajement;;04/09/2025;12/09/2025;6;100%;0%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);User Story (IBM);d. BR Day  4 : Integration WA, Livechat, FBM;;04/09/2025;12/09/2025;6;100%;0%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);User Story (IBM);e. BR Day  5 : WFM;;04/09/2025;12/09/2025;6;100%;0%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);User Story (IBM);f. BR Day  6 : Modul Escalation Manajemen;;04/09/2025;12/09/2025;6;100%;0%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);User Story (IBM);g. BR Day   7 : Knowledge Manajemen;;04/09/2025;12/09/2025;6;100%;0%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);User Story (IBM);h. BR Day   8 : Channel Call & Telesale;;04/09/2025;12/09/2025;6;100%;0%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);User Story (IBM);i. BR Day   9 : Modul QA dan Penjadwalan QA;;04/09/2025;12/09/2025;6;100%;0%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);User Story (IBM);j. BR Day   10: Report & Dashboard;;04/09/2025;12/09/2025;6;100%;0%;100%;Done;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Persetujuan User Story (IBM);a. BR Day 1 : Modul User Manajemen;;01/09/2025;12/09/2025;9;100%;0%;0%;Started;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Persetujuan User Story (IBM);b. BR Day  2 : Modul Email & Sosmed;;01/09/2025;12/09/2025;9;100%;0%;0%;Started;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Persetujuan User Story (IBM);c. BR Day  3 : Modul Case Manajement;;01/09/2025;12/09/2025;9;100%;0%;0%;Started;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Persetujuan User Story (IBM);d. BR Day  4 : Integration WA, Livechat, FBM;;01/09/2025;12/09/2025;9;100%;0%;0%;Started;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Persetujuan User Story (IBM);e. BR Day  5 : WFM;;01/09/2025;12/09/2025;9;100%;0%;0%;Started;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Persetujuan User Story (IBM);f. BR Day  6 : Modul Escalation Manajemen;;01/09/2025;12/09/2025;9;100%;0%;0%;Started;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Persetujuan User Story (IBM);g. BR Day   7 : Knowledge Manajemen;;01/09/2025;12/09/2025;9;100%;0%;0%;Started;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Persetujuan User Story (IBM);h. BR Day   8 : Channel Call & Telesale;;01/09/2025;12/09/2025;9;100%;0%;0%;Started;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Persetujuan User Story (IBM);i. BR Day   9 : Modul QA dan Penjadwalan QA;;01/09/2025;12/09/2025;9;100%;0%;0%;Started;Syarief & Nita
+OMNI Channel System;Business Requirement (BR);Persetujuan User Story (IBM);j. BR Day   10: Report & Dashboard;;01/09/2025;12/09/2025;9;100%;0%;0%;Started;Syarief & Nita
+OMNI Channel System;Architecture;Forum Pra-Architecture;a. Architecture Forum;;11/08/2025;15/08/2025;5;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Architecture;Forum Pra-Architecture;b. IT Grooming;Topologi;23/07/2025;23/07/2025;1;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Architecture;Forum Pra-Architecture;b. IT Grooming;Integrasi dengan T24 Core Banking;23/07/2025;23/07/2025;1;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Architecture;Forum Pra-Architecture;b. IT Grooming;Smart Vista (SV);23/07/2025;23/07/2025;1;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Architecture;Forum Pra-Architecture;b. IT Grooming;LDAP;23/07/2025;23/07/2025;1;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Architecture;Forum Pra-Architecture;b. IT Grooming;ESB;23/07/2025;23/07/2025;1;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Architecture;Forum Pra-Architecture;b. IT Grooming;BSI Call;23/07/2025;24/07/2025;2;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Architecture;Forum Pra-Architecture;b. IT Grooming;Chatbot;23/07/2025;24/07/2025;2;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Customer Request;Customer Request (CR);a. CR SV, Core Banking, ESB, CHMS, dan LDAP;;15/06/2025;30/06/2025;10;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Customer Request;Customer Request (CR);b. CR  Integrasi Bot & Medina;;15/06/2025;30/06/2025;10;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Customer Request;Customer Request (CR);c. CR Queuing System (QMS) / Medina / Securiti.AI;;01/09/2025;30/09/2025;21;0%;0%;0%;Started;Syarief & Nita
+OMNI Channel System;Customer Request;Customer Request (CR);d. CR  OASE;;01/09/2025;30/09/2025;21;0%;0%;0%;Started;Syarief & Nita
+OMNI Channel System;Customer Request;CR Assessment (IPR);a. CR SV, Core Banking, ESB, CHMS, dan LDAP;;;;;0%;0%;0%;Not Started;Syarief & Nita
+OMNI Channel System;Customer Request;CR Assessment (IPR);b. CR  Integrasi Bot;;;;;0%;0%;0%;Not Started;Syarief & Nita
+OMNI Channel System;Customer Request;CR Assessment (IPR);c. CR Queuing System (QMS) / Medina / Securiti.AI;;;;;0%;0%;0%;Not Started;Syarief & Nita
+OMNI Channel System;Customer Request;CR Assessment (IPR);d. CR  OASE;;;;;0%;0%;0%;Not Started;Syarief & Nita
+OMNI Channel System;Project Chartered;Project Chartered;a. Drafting;;30/04/2025;06/05/2025;4;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Project Chartered;Project Chartered;b. Sirkuler ;;07/05/2025;30/09/2025;97;0%;50%;50%;Started;Syarief & Nita
+OMNI Channel System;Development & Testing;Development;;;;;;0%;0%;0%;Not Started;Syarief & Nita
+OMNI Channel System;Development & Testing;SIT & UAT;;;;;;0%;0%;0%;Not Started;Syarief & Nita
+OMNI Channel System;Development & Testing;PT;;;;;;0%;0%;0%;Not Started;Syarief & Nita
+OMNI Channel System;Development & Testing;Pentest;;;;;;0%;0%;0%;Not Started;Syarief & Nita
+OMNI Channel System;Development & Testing;RCB;;;;;;0%;0%;0%;Not Started;Syarief & Nita
+OMNI Channel System;Development & Testing;PTR;;;;;;0%;0%;0%;Not Started;Syarief & Nita
+OMNI Channel System;Persiapan Implementasi;Penyusunan Matriks Interaksi;;;11/06/2025;12/06/2025;2;100%;100%;100%;Done;Syarief & Nita
+OMNI Channel System;Persiapan Implementasi;Review Matriks;;;07/07/2025;30/09/2025;61;0%;30%;30%;On Progress;Syarief & Nita
+OMNI Channel System;Persiapan Implementasi;Persetujuan Matriks;;;;;;0%;0%;0%;Not Started;Syarief & Nita
+OMNI Channel System;Persiapan Implementasi;Penyusunan PTO;;;04/07/2025;30/09/2025;62;0%;10%;10%;On Progress;Syarief & Nita
+OMNI Channel System;Persiapan Implementasi;Review PTO;;;;;;0%;0%;0%;Not Started;Syarief & Nita
+OMNI Channel System;Persiapan Implementasi;WPP PTO;;;;;;0%;0%;0%;Not Started;Syarief & Nita
+OMNI Channel System;Persiapan Implementasi;Sosialisasi & Training;;;;;;0%;0%;0%;Not Started;Syarief & Nita
+OMNI Channel System;Persiapan Implementasi;Live Release 1;;;;;;0%;0%;0%;Not Started;Syarief & Nita
+Telephony System;Usulan pengadaan telephony system;Nota Usulan Pengadaan;;;02/01/2025;31/01/2025;19;100%;100%;100%;Done;Fajar, Syarief & Nita
+Telephony System;Usulan pengadaan telephony system;RFI (Req for Information);;;10/01/2025;31/01/2025;13;100%;100%;100%;Done;Fajar, Syarief & Nita
+Telephony System;Usulan pengadaan telephony system;RFP (Req for Proposal);;;30/01/2025;07/02/2025;7;100%;100%;100%;Done;Fajar, Syarief & Nita
+Telephony System;Usulan pengadaan telephony system;Revisi Nota Usulan Pengadaan;;;17/04/2025;02/05/2025;10;100%;100%;100%;Done;Fajar, Syarief & Nita
+Telephony System;Pengadaan;Kebutuhan Pengadaan (SOW & CR);;;10/02/2025;14/02/2025;5;100%;100%;100%;Done;Fajar, Syarief & Nita
+Telephony System;Pengadaan;Pengiriman RFP Respond & Hasil RFP Respond;;;17/02/2025;21/02/2025;5;100%;100%;100%;Done;Fajar, Syarief & Nita
+Telephony System;Pengadaan;Nota penunjukkan langsung vendor;;;28/04/2025;02/05/2025;4;100%;100%;100%;Done;Fajar, Syarief & Nita
+Telephony System;Pengadaan;Aanwijzing;;;21/04/2025;09/05/2025;14;100%;100%;100%;Done;Fajar, Syarief & Nita
+Telephony System;Pengadaan;Penilaian Teknis;;;10/07/2025;31/07/2025;16;100%;100%;100%;Done;Fajar, Syarief & Nita
+Telephony System;Pengadaan;Penyusunan SOW Final;;;14/05/2025;20/05/2025;5;100%;100%;100%;Done;Fajar, Syarief & Nita
+Telephony System;Pengadaan;Penyusunan BOQ ;;;21/05/2025;05/06/2025;10;100%;100%;100%;Done;Fajar, Syarief & Nita
+Telephony System;Pengadaan;Negosiasi Harga;;;28/07/2025;31/08/2025;25;100%;50%;100%;Done;Fajar, Syarief & Nita
+Telephony System;Pengadaan;Tanda Tangan Berita Acara;;;27/08/2025;12/09/2025;12;100%;0%;50%;On Progress;Fajar, Syarief & Nita
+Telephony System;Pengadaan;PKS;;;27/08/2025;12/09/2025;12;100%;0%;0%;On Progress;Fajar, Syarief & Nita
+Telephony System;Development & Testing Sistem Telephony;Development;;;21/07/2025;12/09/2025;39;100%;0%;0%;On Progress;Fajar, Syarief & Nita
+Telephony System;Development & Testing Sistem Telephony;Testing;;;15/09/2025;22/09/2025;6;0%;0%;0%;Not Started;Fajar, Syarief & Nita
+Telephony System;Development & Testing Sistem Telephony;Live;;;22/09/2025;30/09/2025;7;0%;0%;0%;Not Started;Fajar, Syarief & Nita
+Revamp CHMS;Planning Stage;Usulan Inisiatif IT;;;02/10/2024;11/10/2024;8;100%;100%;100%;Done;Nita & Nanin
+Revamp CHMS;Planning Stage;Submit JPS;;;14/10/2024;18/10/2024;5;100%;100%;100%;Done;Nita & Nanin
+Revamp CHMS;Planning Stage;Draft CR;;;21/10/2024;15/11/2024;20;100%;100%;100%;Done;Nita & Nanin
+Revamp CHMS;Planning Stage;Submit CR;;;18/11/2024;29/11/2024;10;100%;100%;100%;Done;Nita & Nanin
+Revamp CHMS;Planning Stage;One on One JPS IT;;;02/12/2024;31/12/2024;20;100%;100%;100%;Done;Nita & Nanin
+Revamp CHMS;Planning Stage;Announcement JPS IT 2025;;;02/01/2025;24/01/2025;17;100%;100%;100%;Done;Nita & Nanin
+Revamp CHMS;User Assesment ;Alignment Bispro Operation;;;03/02/2025;07/03/2025;25;100%;100%;100%;Done;Nita & Nanin
+Revamp CHMS;User Assesment ;Workshop;;;10/03/2025;14/03/2025;5;100%;100%;100%;Done;Nita & Nanin
+Revamp CHMS;User Assesment ;Finalisasi Requirement;;;17/03/2025;28/03/2025;9;100%;100%;100%;Done;Nita & Nanin
+Revamp CHMS;User Assesment ;CR Final (fokuskan ke Release 1);;;14/03/2025;11/04/2025;14;100%;100%;100%;Done;Nita & Nanin
+Revamp CHMS;User Assesment ;Submit Final CR;;;14/04/2025;30/04/2025;12;100%;100%;100%;Done;Nita & Nanin
+Revamp CHMS;User Assesment ;Draft CR Remapping Alignment Omnichannel;;;27/08/2025;31/10/2025;47;0%;50%;100%;Done;Nita & Nanin
+Revamp CHMS;User Assesment ;Finalisasi CR Remapping Alignment Omnichannel;;;27/08/2025;31/10/2025;47;0%;0%;0%;On Progress;Nita & Nanin
+Revamp CHMS;User Assesment ;Submit Final CR Remapping Alignment Omnichannel;;;27/08/2025;31/10/2025;47;0%;0%;0%;On Progress;Nita & Nanin
+Revamp CHMS;Pre-Requisite Operation;Drafting Matrix;;;21/04/2025;30/04/2025;8;100%;100%;100%;Done;Nita & Nanin
+Revamp CHMS;Pre-Requisite Operation;Finalisasi Matriks;;;01/05/2025;31/07/2025;58;100%;100%;100%;Done;Nita & Nanin
+Revamp CHMS;Pre-Requisite Operation;Mapping Matrix dan Data pengaduan;;;11/08/2025;30/09/2025;36;0%;0%;0%;On Progress;Nita & Nanin
+Revamp CHMS;IT Assesment ;ITSC;;;03/02/2025;04/02/2025;2;100%;100%;100%;Done;Nita & Nanin
+Revamp CHMS;IT Assesment ;Grooming ;;;10/02/2025;14/02/2025;5;100%;100%;100%;Done;Nita & Nanin
+Revamp CHMS;IT Assesment ;Join Discuss;;;17/02/2025;28/02/2025;10;100%;100%;100%;Done;Nita & Nanin
+Revamp CHMS;IT Assesment ;Risk Register;;;01/05/2025;16/05/2025;9;100%;100%;100%;Done;Nita & Nanin
+Revamp CHMS;IT Assesment ;TF Meeting;;;19/05/2025;15/08/2025;60;100%;100%;100%;Done;Nita & Nanin
+Revamp CHMS;IT Assesment ;Join Discuss Alignment Omnichannel;;;27/08/2025;31/10/2025;47;0%;0%;0%;On Progress;Nita & Nanin
+Revamp CHMS;IT Assesment ;Final Join Discuss;;;27/08/2025;30/09/2025;24;0%;0%;0%;On Progress;Nita & Nanin
+Revamp CHMS;Execution Stage;FSD;;;19/05/2025;30/09/2025;91;0%;0%;0%;On Progress;Nita & Nanin
+Revamp CHMS;Execution Stage;Forum Arsitektur;;;25/05/2025;30/09/2025;86;0%;0%;0%;On Progress;Nita & Nanin
+Revamp CHMS;Execution Stage;Development (Mapping Matrix dan Data pengaduan);;;02/06/2025;30/09/2025;83;0%;0%;0%;On Progress;Nita & Nanin
+Revamp CHMS;Execution Stage;TMP;;;01/09/2025;30/09/2025;21;0%;0%;0%;On Progress;Nita & Nanin
+Revamp CHMS;Execution Stage;SIT ;;;08/09/2025;19/09/2025;10;0%;0%;0%;On Progress;Nita & Nanin
+Revamp CHMS;Execution Stage;UAT;;;08/09/2025;19/09/2025;10;0%;0%;0%;On Progress;Nita & Nanin
+Revamp CHMS;Execution Stage;RCB (DH, GH, Dir);;;22/09/2025;10/10/2025;15;0%;0%;0%;Not Started;Nita & Nanin
+Revamp CHMS;Execution Stage;Deploy;;;13/10/2025;17/10/2025;5;0%;0%;0%;Not Started;Nita & Nanin
+Revamp CHMS;Execution Stage;PTR;;;20/10/2025;31/10/2025;10;0%;0%;0%;Not Started;Nita & Nanin
+Revamp CHMS;Execution Stage;Release Fase 1;;;11/11/2025;11/11/2025;1;0%;0%;0%;Not Started;Nita & Nanin
+Revamp CHMS;Implementation Stage;Penyusunan Ketentuan (PTO);;;15/09/2025;30/09/2025;12;0%;0%;0%;Not Started;Nita & Nanin
+Revamp CHMS;Implementation Stage;WPP ;;;01/10/2025;10/10/2025;8;0%;0%;0%;Not Started;Nita & Nanin
+Revamp CHMS;Implementation Stage;Sosialisasi;;;15/12/2025;31/12/2025;11;0%;0%;0%;Not Started;Nita & Nanin
+Technologi Bot;Preparation;Re-Kajian ;;;14/04/2025;18/04/2025;4;100%;100%;100%;Done;Nita
+Technologi Bot;Preparation;Alignment Project DDM_ Analitic dan AI;;;21/04/2025;22/05/2025;21;100%;100%;100%;Done;Nita
+Technologi Bot;Preparation;Alignment Project Medina;;;;;;0%;0%;0%;Not Started;Nita
+Technologi Bot;Preparation;Draft Kajian & Usulan;;;;;;0%;0%;0%;Not Started;Nita
+Technologi Bot;Preparation;Nota Re-Kajian;;;;;;0%;0%;0%;Not Started;Nita
+Voip Byond;Business Process and Deflection Workflow Definition;Nota Usulan Pengadaan;;;01/02/2023;31/03/2023;43;0%;0%;0%;100%;Nita
+Voip Byond;Business Process and Deflection Workflow Definition;CR;;;01/10/2024;31/12/2024;64;0%;0%;0%;100%;Nita
+Voip Byond;Development & Testing;Development;;;06/01/2025;21/02/2025;32;100%;100%;100%;Done;Nita
+Voip Byond;Development & Testing;Kertas Kerja Prioritisasi;;;16/06/2025;30/06/2025;10;100%;100%;100%;Done;Nita
+Voip Byond;Development & Testing;SIT & UAT;;;24/02/2025;07/03/2025;10;100%;30%;30%;Late;Nita
+Voip Byond;Development & Testing;Regression Test;;;10/03/2025;11/03/2025;2;100%;0%;0%;Late;Nita
+Voip Byond;Development & Testing;Pentest Pra-Production;;;12/03/2025;18/03/2025;5;100%;0%;0%;Late;Nita
+Voip Byond;Development & Testing;Performance Test;;;19/03/2025;21/03/2025;3;100%;0%;0%;Late;Nita
+Voip Byond;Development & Testing;RCB;;;24/03/2025;28/03/2025;4;100%;0%;0%;Late;Nita
+Voip Byond;Development & Testing;Pentest Post-Production;;;07/04/2025;08/04/2025;1;100%;0%;0%;Late;Nita
+Voip Byond;Development & Testing;Release;;;09/04/2025;09/04/2025;1;100%;0%;0%;Late;Nita
+Voip Byond;Development & Testing;PTR;;;10/04/2025;11/04/2025;2;100%;0%;0%;Late;Nita
+Voip Byond;Implementation;Campaign;;;14/04/2025;25/04/2025;9;100%;0%;0%;Late;Nita
+Voip Byond;PTO;Draft PTO;;;10/03/2025;14/03/2025;5;100%;0%;0%;Late;Nita
+Voip Byond;PTO;WPP PTO;;;17/03/2025;31/03/2025;9;100%;0%;0%;Late;Nita
+Menu Sanggah BSI Net;Performance Test;Meeting Check Point;;;02/01/2025;03/01/2025;2;100%;100%;100%;Done;Nita
+Menu Sanggah BSI Net;Performance Test;Persiapan Envi PT ;;;13/01/2025;31/01/2025;12;100%;100%;100%;Done;Nita
+Menu Sanggah BSI Net;Performance Test;Testing Dry Run PT;;;03/02/2025;14/02/2025;10;100%;100%;100%;Done;Nita
+Menu Sanggah BSI Net;Performance Test;Tunning ;;;17/02/2025;28/02/2025;10;100%;100%;100%;Done;Nita
+Menu Sanggah BSI Net;Performance Test;Stressing Test;;;03/03/2025;14/03/2025;10;100%;100%;100%;Done;Nita
+Menu Sanggah BSI Net;Performance Test;Tunning ;;;14/03/2025;21/03/2025;6;100%;100%;100%;Done;Nita
+Menu Sanggah BSI Net;Performance Test;Load Test;;;24/03/2025;26/03/2025;3;100%;100%;100%;Done;Nita
+Menu Sanggah BSI Net;Performance Test;Finalisasi PT;;;08/04/2025;18/04/2025;8;100%;100%;100%;Done;Nita
+Menu Sanggah BSI Net;Performance Test;BA PT;;;20/04/2025;25/04/2025;5;100%;100%;100%;Done;Nita
+Menu Sanggah BSI Net;RCB;Doc RCB;;;28/04/2025;09/05/2025;9;100%;10%;10%;Late;Nita
+Menu Sanggah BSI Net;RCB;Pelaksanaan RCB;;;11/05/2025;16/05/2025;3;100%;0%;0%;Late;Nita
+Menu Sanggah BSI Net;RCB;Deploy Envi PTR;;;18/05/2025;23/05/2025;5;100%;0%;0%;Late;Nita
+Menu Sanggah BSI Net;PTR;Pelaksanaan PTR;;;01/06/2025;05/06/2025;4;100%;0%;0%;Late;Nita
+Menu Sanggah BSI Net;PTR;BA PTR;;;06/06/2025;10/06/2025;1;100%;0%;0%;Late;Nita
+Menu Sanggah BSI Net;PTR;Deploy Prod;;;10/06/2025;15/06/2025;4;100%;0%;0%;Late;Nita
+Menu Sanggah BSI Net;PTR;Live;;;16/06/2025;16/06/2025;1;100%;0%;0%;Late;Nita
+Pengembangan Exa Anti Attrition;Pelaksanaan PTR;;;;02/01/2025;10/01/2025;7;100%;100%;100%;Done;Nita
+Pengembangan Exa Anti Attrition;Fixing PTR;;;;13/01/2025;17/01/2025;5;100%;100%;100%;Done;Nita
+Pengembangan Exa Anti Attrition;BA PTR;;;;20/01/2025;24/01/2025;5;100%;100%;100%;Done;Nita
+Pengembangan Exa Anti Attrition;Deploy Prod * (base on timeline EXA);;;;08/04/2025;30/04/2025;16;100%;0%;0%;Late;Nita
+Pengembangan Exa Anti Attrition;Live;;;;30/04/2025;30/04/2025;1;100%;0%;0%;Late;Nita
+Pengembangan Exa Anti Attrition;Sosialisasi;;;;01/05/2025;10/05/2025;6;100%;0%;0%;Late;Nita
+Exa Flagging Disabilitas (Add Hook Support);Business Process Definitions;Evaluasi Sistem Existing;;;24/02/2025;07/03/2025;10;100%;100%;100%;Done;Nanin
+Exa Flagging Disabilitas (Add Hook Support);Business Process Definitions;Draft CR & Mockup UI Design EXA;;;24/02/2025;14/03/2025;15;100%;100%;100%;Done;Nanin
+Exa Flagging Disabilitas (Add Hook Support);Business Process Definitions;Finalisasi CR;;;17/03/2025;30/09/2025;125;0%;85%;85%;On Progress;Nanin
+Exa Flagging Disabilitas (Add Hook Support);Business Process Definitions;Submit CR;;;14/04/2025;30/09/2025;112;0%;0%;0%;On Progress;Nanin
+Exa Flagging Disabilitas (Add Hook Support);IT Assessment;Join Discuss & TF Meeting;;;21/04/2025;30/09/2025;108;0%;0%;0%;On Progress;Nanin
+Exa Flagging Disabilitas (Add Hook Support);Development & Testing;Development;;;05/05/2025;31/10/2025;122;0%;0%;0%;On Progress;Nanin
+Exa Flagging Disabilitas (Add Hook Support);Development & Testing;SIT & UAT;;;02/06/2025;31/10/2025;106;0%;0%;0%;On Progress;Nanin
+Exa Flagging Disabilitas (Add Hook Support);Development & Testing;RCB;;;23/06/2025;31/10/2025;93;0%;0%;0%;On Progress;Nanin
+Exa Flagging Disabilitas (Add Hook Support);Development & Testing;PTR;;;07/07/2025;31/10/2025;84;0%;0%;0%;On Progress;Nanin
+Exa Flagging Disabilitas (Add Hook Support);Development & Testing;Live;;;14/07/2025;31/10/2025;79;0%;0%;0%;On Progress;Nanin
+Exa Flagging Disabilitas (Add Hook Support);PTO;Draft PTO;;;16/06/2025;31/10/2025;98;0%;0%;0%;On Progress;Nanin
+Exa Flagging Disabilitas (Add Hook Support);PTO;WPP PTO;;;01/07/2025;31/10/2025;88;0%;0%;0%;On Progress;Nanin
+Exa Call Center SV (FE dan BO) Hold (Mbk Dian Croscek ke Sunan);Business Process Definitions;Evaluasi Sistem Existing;;;24/02/2025;07/03/2025;10;100%;100%;100%;Done;TBC
+Exa Call Center SV (FE dan BO) Hold (Mbk Dian Croscek ke Sunan);Business Process Definitions;Draft CR & Mockup UI Design Exa;;;24/02/2025;14/03/2025;15;100%;100%;100%;Done;TBC
+Exa Call Center SV (FE dan BO) Hold (Mbk Dian Croscek ke Sunan);Business Process Definitions;Finalisasi CR;;;17/03/2025;27/03/2025;9;100%;100%;100%;Done;TBC
+Exa Call Center SV (FE dan BO) Hold (Mbk Dian Croscek ke Sunan);Business Process Definitions;Submit CR;;;08/04/2025;17/04/2025;8;100%;0%;0%;Late;TBC
+Exa Call Center SV (FE dan BO) Hold (Mbk Dian Croscek ke Sunan);IT Assessment;Join Discuss & TF Meeting;;;21/04/2025;30/04/2025;8;100%;0%;0%;Late;TBC
+Exa Call Center SV (FE dan BO) Hold (Mbk Dian Croscek ke Sunan);Development & Testing;Development;;;05/05/2025;05/08/2025;60;100%;0%;0%;Late;TBC
+Exa Call Center SV (FE dan BO) Hold (Mbk Dian Croscek ke Sunan);Development & Testing;SIT & UAT;;;11/08/2025;15/08/2025;5;100%;0%;0%;Late;TBC
+Exa Call Center SV (FE dan BO) Hold (Mbk Dian Croscek ke Sunan);Development & Testing;Regresi;;;18/08/2025;22/08/2025;5;100%;0%;0%;Late;TBC
+Exa Call Center SV (FE dan BO) Hold (Mbk Dian Croscek ke Sunan);Development & Testing;Pentest;;;25/08/2025;29/08/2025;5;100%;0%;0%;Late;TBC
+Exa Call Center SV (FE dan BO) Hold (Mbk Dian Croscek ke Sunan);Development & Testing;RCB;;;08/09/2025;12/09/2025;5;100%;0%;0%;On Progress;TBC
+Exa Call Center SV (FE dan BO) Hold (Mbk Dian Croscek ke Sunan);Development & Testing;PTR;;;15/09/2025;19/09/2025;5;0%;0%;0%;Not Started;TBC
+Exa Call Center SV (FE dan BO) Hold (Mbk Dian Croscek ke Sunan);Development & Testing;Live release 1;;;01/10/2025;31/10/2025;23;0%;0%;0%;Not Started;TBC
+Dashboard Executive (Dashboard Consolidation);Meet Koordinasi bersama Infomedia & DDM;;;;18/02/2025;18/02/2025;1;100%;100%;100%;Done;Nita
+Dashboard Executive (Dashboard Consolidation);List Matriks Dashboard eksisting;;;;19/02/2025;28/02/2025;8;100%;100%;100%;Done;Nita
+Dashboard Executive (Dashboard Consolidation);Diskusi Lanjutan ;;;;01/03/2025;05/03/2025;3;100%;100%;100%;Done;Nita
+Dashboard Executive (Dashboard Consolidation);Finalisasi;;;;10/03/2024;14/03/2024;2;100%;100%;100%;Done;Nita
+Dashboard Executive (Dashboard Consolidation);Development ;;;;17/03/2024;17/04/2024;16;100%;100%;100%;Done;Nita
+Dashboard Executive (Dashboard Consolidation);Live;;;;21/04/2024;30/04/2024;7;100%;100%;100%;Done;Nita
+Dashboard Performance CC;Meet Koordinasi bersama Infomedia;;;;02/01/2025;06/01/2025;3;100%;100%;100%;Done;Nita
+Dashboard Performance CC;Development;;;;07/01/2025;17/01/2025;9;100%;100%;100%;Done;Nita
+Dashboard Performance CC;Testing;;;;20/01/2025;24/01/2025;5;100%;100%;100%;Done;Nita
+Dashboard Performance CC;Fixing;;;;27/01/2025;31/01/2025;2;100%;100%;100%;Done;Nita
+Dashboard Performance CC;Release;;;;01/02/2025;05/02/2025;3;100%;100%;100%;Done;Nita
+Dashboard Anti Attrition dan Program;Meeting Koordinasi  Awal Kebutuhan;;;;17/03/2025;21/03/2025;5;100%;100%;100%;Done;Nita
+Dashboard Anti Attrition dan Program;Meeting Lanjutan Kebutuhan Dashboard;;;;24/03/2025;28/03/2025;4;100%;100%;100%;Done;Nita
+Dashboard Anti Attrition dan Program;Showcase Dashboard;;;;08/04/2025;11/04/2025;4;100%;100%;100%;Done;Nita
+Dashboard Anti Attrition dan Program;Finalisasi Dashboard;;;;14/04/2025;17/04/2025;4;100%;0%;0%;Late;Nita
+Dashboard Anti Attrition dan Program;Program Anti Attriton;;;;21/04/2025;30/04/2025;8;100%;0%;0%;Late;Nita
+Dashboard Anti Attrition dan Program;Sosialisasi*base on schedule SQ;;;;05/05/2025;09/05/2025;5;100%;0%;0%;Late;Nita
+BYOND Sanggah New API;Development & Testing;SIT & UAT;;;07/01/2025;28/02/2025;36;100%;100%;100%;Done;Nita
+BYOND Sanggah New API;Development & Testing;Fixing Temuan SIT & UAT;;;01/03/2025;30/04/2025;35;100%;60%;60%;Late;Nita
+BYOND Sanggah New API;Development & Testing;Testing Ulang ;;;05/05/2025;06/06/2025;20;100%;0%;0%;Late;Nita
+BYOND Sanggah New API;Development & Testing;Kertas Kerja Prioritisasi Project ;;;16/06/2025;30/06/2025;10;100%;100%;100%;Done;Nita
+BYOND Sanggah New API;Development & Testing;Pentest;;;01/07/2025;18/07/2025;14;100%;0%;0%;Late;Nita
+BYOND Sanggah New API;Development & Testing;Fixing Pentest;;;21/07/2025;31/07/2025;9;100%;0%;0%;Late;Nita
+BYOND Sanggah New API;Development & Testing;RCB;;;01/08/2025;22/08/2025;16;100%;0%;0%;Late;Nita
+BYOND Sanggah New API;Development & Testing;PTR;;;25/08/2025;31/08/2025;5;100%;0%;0%;Late;Nita
+BYOND Sanggah New API;Development & Testing;Fixing PTR;;;01/09/2025;15/09/2025;10;0%;0%;0%;On Progress;Nita
+BYOND Sanggah New API;Development & Testing;Release to Prod;;;22/09/2025;23/09/2025;2;0%;0%;0%;Not Started;Nita
+BYOND Sanggah New API;Implementation Stage;Penyusunan Ketentuan (PTO);;;01/07/2025;18/07/2025;14;100%;0%;0%;Late;Nita
+BYOND Sanggah New API;Implementation Stage;WPP ;;;19/07/2025;25/07/2025;5;100%;0%;0%;Late;Nita
+BYOND Sanggah New API;Implementation Stage;Sosialisasi;;;23/09/2025;28/09/2025;4;0%;0%;0%;Not Started;Nita
+Bewize-Menu Customer Care (Chatbot & Sanggah);Business Process Definitions;Diskusi Usulan bersama PO Bewize;;;01/07/2024;19/07/2024;15;100%;100%;100%;Done;Nita
+Bewize-Menu Customer Care (Chatbot & Sanggah);Business Process Definitions;Draft CR ;;;22/07/2024;16/08/2024;20;100%;100%;100%;Done;Nita
+Bewize-Menu Customer Care (Chatbot & Sanggah);Business Process Definitions;Finalisasi CR;;;16/08/2024;20/09/2024;25;100%;100%;100%;Done;Nita
+Bewize-Menu Customer Care (Chatbot & Sanggah);Business Process Definitions;Submit CR;;;23/09/2024;30/09/2024;6;100%;100%;100%;Done;Nita
+Bewize-Menu Customer Care (Chatbot & Sanggah);IT Assessment;Join Discuss & TF Meeting;;;01/10/2024;25/10/2024;19;100%;100%;100%;Done;Nita
+Bewize-Menu Customer Care (Chatbot & Sanggah);Development & Testing;Development;;;28/10/2024;28/02/2025;84;100%;100%;100%;Done;Nita
+Bewize-Menu Customer Care (Chatbot & Sanggah);Development & Testing;SIT & UAT;;;03/03/2025;31/03/2025;19;100%;100%;100%;Done;Nita
+Bewize-Menu Customer Care (Chatbot & Sanggah);Development & Testing;Regresi (senggol apa gk after pengembangan);;;02/04/2025;18/04/2025;8;100%;100%;100%;Done;Nita
+Bewize-Menu Customer Care (Chatbot & Sanggah);Development & Testing;Pentest (*Koneksi aman apa gk-internet);;;21/04/2025;02/05/2025;9;100%;100%;100%;Done;Nita
+Bewize-Menu Customer Care (Chatbot & Sanggah);Development & Testing;PT Sanggah;;;05/05/2025;06/06/2025;20;100%;100%;100%;Done;Nita
+Bewize-Menu Customer Care (Chatbot & Sanggah);Development & Testing;RCB;;;09/06/2025;20/06/2025;9;100%;100%;100%;Done;Nita
+Bewize-Menu Customer Care (Chatbot & Sanggah);Development & Testing;PTR;;;23/06/2025;31/07/2025;28;100%;0%;10%;Late;Nita
+Bewize-Menu Customer Care (Chatbot & Sanggah);Development & Testing;Live;;;01/08/2025;15/08/2025;11;100%;0%;0%;Late;Nita
+Exa Call Center (ATM, BSI Net, Notifikasi Trx);Business Process Definitions;Evaluasi Sistem Existing;;;24/02/2024;07/03/2024;9;100%;100%;100%;Done;Nanin
+Exa Call Center (ATM, BSI Net, Notifikasi Trx);Business Process Definitions;Draft CR & Mockup UI Design EXA;;;24/02/2024;14/03/2024;12;100%;100%;100%;Done;Nanin
+Exa Call Center (ATM, BSI Net, Notifikasi Trx);Business Process Definitions;Finalisasi CR;;;17/03/2024;11/04/2024;14;100%;100%;100%;Done;Nanin
+Exa Call Center (ATM, BSI Net, Notifikasi Trx);Business Process Definitions;Submit CR;;;14/04/2024;18/04/2024;3;100%;100%;100%;Done;Nanin
+Exa Call Center (ATM, BSI Net, Notifikasi Trx);IT Assessment;Join Discuss & TF Meeting;;;21/04/2024;30/04/2024;7;100%;100%;100%;Done;Nanin
+Exa Call Center (ATM, BSI Net, Notifikasi Trx);Development & Testing;Development;;;05/05/2024;31/12/2024;163;100%;100%;100%;Done;Nanin
+Exa Call Center (ATM, BSI Net, Notifikasi Trx);Development & Testing;SIT & UAT;;;01/01/2025;09/05/2025;80;100%;100%;100%;Done;Nanin
+Exa Call Center (ATM, BSI Net, Notifikasi Trx);Development & Testing;RCB;;;12/05/2025;30/09/2025;94;0%;10%;10%;On Progress;Nanin
+Exa Call Center (ATM, BSI Net, Notifikasi Trx);Development & Testing;PTR;;;19/05/2025;30/09/2025;91;0%;0%;0%;On Progress;Nanin
+Exa Call Center (ATM, BSI Net, Notifikasi Trx);Development & Testing;Live;;;26/05/2025;30/09/2025;86;0%;0%;0%;On Progress;Nanin
+Exa Call Center (ATM, BSI Net, Notifikasi Trx);PTO;Draft PTO;;;01/05/2025;30/09/2025;100;0%;0%;0%;On Progress;Nanin
+Exa Call Center (ATM, BSI Net, Notifikasi Trx);PTO;WPP PTO;;;19/05/2025;30/09/2025;91;0%;0%;0%;On Progress;Nanin
+Project Video Banking (Reminder DH cf Meeting Level GH);Pra-Project Planning;Meeting bersama DSG;;;16/06/2025;20/06/2025;5;100%;100%;100%;Done;Nita & Nanin
+Project Video Banking (Reminder DH cf Meeting Level GH);Pra-Project Planning;Memo Tanggapan ke DSG terkait Peralihan Project;;;16/06/2025;30/06/2025;10;100%;100%;100%;Done;Nita & Nanin
+Project HC (Acc Maintance & Autorisation);Preparation;Meeting bersama CC & CBG;;;16/06/2025;20/06/2025;5;100%;100%;100%;Done;Nita
+Project HC (Acc Maintance & Autorisation);Preparation;Koordinasi ketentuan PTO;;;23/06/2025;30/06/2025;5;100%;100%;100%;Done;Nita
+Project HC (Acc Maintance & Autorisation);Preparation;Penyusunan Draft PTO;;;01/07/2025;11/07/2025;9;100%;100%;100%;Done;Nita
+Project HC (Acc Maintance & Autorisation);Preparation;Review dan Evaluasi;;;14/07/2025;25/07/2025;10;100%;100%;100%;Done;Nita
+Project HC (Acc Maintance & Autorisation);Preparation;Finalisasi Draft;;;28/07/2025;08/08/2025;10;100%;100%;100%;Done;Nita
+Project HC (Acc Maintance & Autorisation);Preparation;Memo dan WPP;;;11/08/2025;15/08/2025;5;100%;0%;20%;Late;Nita
+Project HC (Acc Maintance & Autorisation);Preparation;Sirkuler & Release NPS;;;18/08/2025;22/08/2025;5;100%;0%;0%;Late;Nita
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);Planning Stage;Alignment Timeline Project;;;07/07/2025;11/07/2025;5;100%;100%;100%;Done;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);Planning Stage;Grooming Awal UI dan Bispro bersama Vendor dan DBR;;;14/07/2025;25/07/2025;10;100%;100%;100%;Done;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);Planning Stage;Draft CR ;;;28/07/2025;22/08/2025;20;100%;100%;100%;Done;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);Planning Stage;Submit Draft CR;;;25/08/2025;29/08/2025;5;100%;0%;0%;Late;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);User Assesment ;Grooming bersama BP;;;01/09/2025;12/09/2025;9;100%;0%;0%;On Progress;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);User Assesment ;Finalisasi Requirement;;;15/09/2025;30/09/2025;12;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);User Assesment ;Submit Final CR;;;01/10/2025;10/10/2025;8;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);User Assesment ;Join Discuss ;;;13/10/2025;24/10/2025;10;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);User Assesment ;Risk Register;;;27/10/2025;21/11/2025;20;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);User Assesment ;TF Meeting;;;24/11/2025;12/12/2025;15;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);IT Assesment ;ITSC;;;;;;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);IT Assesment ;Grooming ;;;;;;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);IT Assesment ;Join Discuss;;;;;;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);IT Assesment ;Risk Register;;;;;;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);IT Assesment ;TF Meeting;;;;;;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);Execution Stage;FSD;;;;;;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);Execution Stage;Forum Arsitektur;;;;;;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);Execution Stage;Development (Mapping Matrix dan Data pengaduan);;;;;;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);Execution Stage;TMP;;;;;;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);Execution Stage;SIT ;;;;;;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);Execution Stage;UAT;;;;;;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);Execution Stage;RCB (DH, GH, Dir);;;;;;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);Execution Stage;Deploy;;;;;;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);Execution Stage;PTR;;;;;;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);Implementation Stage;Penyusunan Ketentuan (PTO);;;;;;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);Implementation Stage;WPP ;;;;;;0%;0%;0%;Not Started;Nita & Nanin
+Project Sanggah, Chatbot, Voip di Xpand (New BSI Net);Implementation Stage;Sosialisasi;;;;;;0%;0%;0%;Not Started;Nita & Nanin
+Auto Greeting AISYAH BYOND IPHONE & ANDROID;FKK;;;;;;;0%;0%;0%;Not Started;Syarief
+Auto Greeting AISYAH BYOND IPHONE & ANDROID;Strategi Implementasi;;;;;;;0%;0%;0%;Not Started;Syarief
+Auto Greeting AISYAH BYOND IPHONE & ANDROID;PSD;;;;;;;0%;0%;0%;Not Started;Syarief
+Auto Greeting AISYAH BYOND IPHONE & ANDROID;Object Deploy;;;;;;;0%;0%;0%;Not Started;Syarief
+Auto Greeting AISYAH BYOND IPHONE & ANDROID;BA Testing;;;;;;;0%;0%;0%;Not Started;Syarief
+Auto Greeting AISYAH BYOND IPHONE & ANDROID;Materi RCB;;;;;;;0%;0%;0%;Not Started;Syarief
+CHMS di Chatbot;Planning Stage;Alignment Timeline Project;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;Planning Stage;Grooming Awal UI dan Bispro;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;Planning Stage;Draft CR ;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;Planning Stage;Submit Draft CR;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;User Assesment ;Grooming bersama BP;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;User Assesment ;Finalisasi Requirement;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;User Assesment ;Submit Final CR;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;User Assesment ;Join Discuss ;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;User Assesment ;Risk Register;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;User Assesment ;TF Meeting;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;IT Assesment ;ITSC;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;IT Assesment ;Grooming ;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;IT Assesment ;Join Discuss;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;IT Assesment ;Risk Register;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;IT Assesment ;TF Meeting;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;Execution Stage;FSD;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;Execution Stage;Forum Arsitektur;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;Execution Stage;Development (Mapping Matrix dan Data pengaduan);;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;Execution Stage;TMP;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;Execution Stage;SIT ;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;Execution Stage;UAT;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;Execution Stage;RCB (DH, GH, Dir);;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;Execution Stage;Deploy;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;Execution Stage;PTR;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;Implementation Stage;Penyusunan Ketentuan (PTO);;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;Implementation Stage;WPP ;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+CHMS di Chatbot;Implementation Stage;Sosialisasi;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+QMS di Chatbot;Planning Stage;Alignment Timeline Project;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+QMS di Chatbot;Planning Stage;Grooming Awal UI dan Bispro;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+QMS di Chatbot;Planning Stage;Draft CR ;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+QMS di Chatbot;Planning Stage;Submit Draft CR;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+QMS di Chatbot;Assesment ;Grooming bersama BP;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+QMS di Chatbot;Assesment ;Finalisasi Requirement;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+QMS di Chatbot;Assesment ;Submit Final CR;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+QMS di Chatbot;Assesment ;Join Discuss ;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+QMS di Chatbot;Assesment ;Risk Register;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+QMS di Chatbot;Assesment ;TF Meeting;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+QMS di Chatbot;Execution Stage;FSD;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+QMS di Chatbot;Execution Stage;Forum Arsitektur;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+QMS di Chatbot;Execution Stage;Development ;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+QMS di Chatbot;Execution Stage;SIT ;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+QMS di Chatbot;Execution Stage;UAT;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+QMS di Chatbot;Execution Stage;RCB (DH, GH, Dir);;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+QMS di Chatbot;Execution Stage;Deploy;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+QMS di Chatbot;Execution Stage;PTR;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+QMS di Chatbot;Implementation Stage;Sosialisasi;;;;;;0%;0%;0%;Not Started;Syarief & Nanin
+Akad Chatbot;Planning Stage;Grooming Awal UI dan Bispro;;;04/08/2025;04/08/2025;1;100%;100%;100%;Done;Syarief & Sahrul
+Akad Chatbot;Planning Stage;Draft CR ;;;04/08/2025;04/08/2025;1;100%;100%;100%;Done;Syarief & Sahrul
+Akad Chatbot;Planning Stage;Submit Draft CR;;;04/08/2025;04/08/2025;1;100%;100%;100%;Done;Syarief & Sahrul
+Akad Chatbot;Assesment ;Grooming bersama BP;;;04/08/2025;04/08/2025;1;100%;100%;100%;Done;Syarief & Sahrul
+Akad Chatbot;Assesment ;Finalisasi Requirement;;;04/08/2025;04/08/2025;1;100%;100%;100%;Done;Syarief & Sahrul
+Akad Chatbot;Assesment ;Submit Final CR;;;04/08/2025;04/08/2025;1;100%;100%;100%;Done;Syarief & Sahrul
+Akad Chatbot;Assesment ;Join Discuss ;;;00/01/1900;00/01/1900;0;100%;100%;100%;Done;Syarief & Sahrul
+Akad Chatbot;Assesment ;Risk Register;;;04/08/2025;04/08/2025;1;100%;100%;100%;Done;Syarief & Sahrul
+Akad Chatbot;Assesment ;TF Meeting;;;;;;0%;0%;0%;Not Started;Syarief & Sahrul
+Akad Chatbot;Execution Stage;FSD;;;;;;0%;0%;0%;Not Started;Syarief & Sahrul
+Akad Chatbot;Execution Stage;Forum Arsitektur;;;;;;0%;0%;0%;Not Started;Syarief & Sahrul
+Akad Chatbot;Execution Stage;Development ;;;;;;0%;0%;0%;Not Started;Syarief & Sahrul
+Akad Chatbot;Execution Stage;SIT ;;;;;;0%;0%;0%;Not Started;Syarief & Sahrul
+Akad Chatbot;Execution Stage;UAT;;;;;;0%;0%;0%;Not Started;Syarief & Sahrul
+Akad Chatbot;Execution Stage;RCB (DH, GH, Dir);;;;;;0%;0%;0%;Not Started;Syarief & Sahrul
+Akad Chatbot;Execution Stage;Deploy;;;;;;0%;0%;0%;Not Started;Syarief & Sahrul
+Akad Chatbot;Execution Stage;PTR;;;;;;0%;0%;0%;Not Started;Syarief & Sahrul
+Akad Chatbot;Implementation Stage;Sosialisasi;;;;;;0%;0%;0%;Not Started;Syarief & Sahrul
+Strategy Pencapaian MRI;KAK (Kerangka Acuan Kerja) & Evaluasi;;;;11/07/2025;31/07/2025;15;100%;100%;100%;Done;Syarief & Sahrul
+Strategy Pencapaian MRI;Kick Off;;;;21/07/2025;21/07/2025;1;100%;100%;100%;Done;Syarief & Sahrul
+Strategy Pencapaian MRI;Kertas Kerja;;;;11/07/2025;31/07/2025;15;100%;100%;100%;Done;Syarief & Sahrul
+Strategy Pencapaian MRI;Update Knowledge;;;;12/07/2025;31/07/2025;14;100%;100%;100%;Done;Syarief & Sahrul
+Strategy Pencapaian MRI;Evaluasi;;;;12/07/2025;31/07/2025;14;100%;100%;100%;Done;Syarief & Sahrul
+Evaluasi Chatbot Existing;Kajian;;;;;;;0%;0%;0%;Not Started;Nanin & Akmal
+Dashboard Development;Memperbaiki PIC Project;;;;04/08/2025;08/08/2025;5;100%;100%;100%;Done;Sahrul
+Upgrade Versi Chatbot;Kajian;;;;01/07/2025;08/07/2025;6;100%;50%;50%;Late;Nanin
+Upgrade Versi Chatbot;Draft CR ;;;;09/07/2025;11/07/2025;3;100%;0%;0%;Late;Nanin
+Upgrade Versi Chatbot;CR;;;;14/07/2025;15/07/2025;2;0%;0%;0%;Not Started;Nanin
+Upgrade Versi Chatbot;Implementasi;;;;;;;0%;0%;0%;0%;Nanin
